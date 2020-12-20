@@ -1,4 +1,4 @@
-from player import HumanPlayer, RandomComputerPlayer
+from player import HumanPlayer, RandomComputerPlayer, SmartComputerPlayer
 import math
 import time
 
@@ -80,7 +80,7 @@ def play(game, x_player, o_player, print_game = True):
 
         if game.make_move(square, letter):
             if print_game:
-                print(letter + ' makes a move to square {square}')
+                print(letter + f' makes a move to square {square}')
                 game.print_board()
                 print('')
 
@@ -94,12 +94,13 @@ def play(game, x_player, o_player, print_game = True):
                 letter = 'O'
             else:
                 letter = 'X'
-        
+        time.sleep(.5)
+
     if print_game:
         print('It\'s a tie!')
             
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
-    o_player = RandomComputerPlayer('O')
+    o_player = SmartComputerPlayer('O')
     t = TicTacToe()
     play(t, x_player, o_player, print_game = True)
