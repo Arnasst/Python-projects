@@ -39,11 +39,11 @@ class SmartComputerPlayer(Player):
         super().__init__(letter)
 
     def get_move(self, game):
-        if len(game.available_moves()) == 9:
-            square = random.choice(game.available_moves())
-        else:
+        #if len(game.available_moves()) == 9:
+        #    square = random.choice(game.available_moves())
+        #else:
             # get the square with max utility (minimax algorithm)
-            square = self.minimax(game, self.letter)['position']
+        square = self.minimax(game, self.letter)['position']
         return square
     
     def minimax(self, state, player):
