@@ -139,8 +139,5 @@ def play(dim_size = 10, num_bombs = 10):
         print(board)
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     play()
-=======
-    play()
->>>>>>> 7c6b787f52a92fc605fd29a86ced6a593dd94eda
+
